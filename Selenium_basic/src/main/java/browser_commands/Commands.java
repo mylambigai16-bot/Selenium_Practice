@@ -17,7 +17,7 @@ public class Commands {
 		else
 			System.out.println("Not same");
 		String pageSource=driver.getPageSource();
-		//System.out.println("Page source: "+pageSource);
+		System.out.println("Page source: "+pageSource);
 		System.out.println("Page source length: "+pageSource.length());
 		driver.close();
 
