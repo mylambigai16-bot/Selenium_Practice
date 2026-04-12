@@ -16,7 +16,7 @@ public class BrowserClose {
 		WebElement show=driver.findElement(By.xpath("//button[@id=\"j_idt88:j_idt91\"]"));
 		show.click();
 		driver.close();
-		
+		 
 	}
 
 }
