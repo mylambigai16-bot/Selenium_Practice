@@ -13,8 +13,8 @@ public class JSDemo_1 {
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		String name = js.executeScript("document.getElementsByTagName('input')[1].value;").toString();
 
-		name.value
+		//name.value
 
 	}
-
+ 
 }
