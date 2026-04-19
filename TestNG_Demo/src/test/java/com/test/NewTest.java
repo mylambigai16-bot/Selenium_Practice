@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -25,8 +26,8 @@ public class NewTest {
 	  //System.out.println("Test start");
 	  ChromeOptions option=new ChromeOptions();
 	  option.addArguments("--start-maximized");
-	  option.addArguments("--headless");
-	  driver = new ChromeDriver();
+	  //option.addArguments("--headless");
+	  driver = new ChromeDriver(option);
 	  driver.get("https://www.demoblaze.com/");
   }
   @AfterMethod
@@ -41,6 +42,10 @@ public class NewTest {
 	  wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginusername"))).sendKeys("mylu");
 	  driver.findElement(By.id("loginpassword")).sendKeys("myl0616");
 	  driver.findElement(By.xpath("//button[text()='Log in']")).click(); 
+	  wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//a[@id=\"nameofuser\"]")));
+	  String actual=driver.findElement(By.xpath("//a[@id=\"nameofuser\"]")).getText();
+	  System.out.println(actual);
+	  Assert.assertEquals(actual, "Welcome mylu","Login not successful");
   }
   
   @Test 
@@ -54,6 +59,7 @@ public class NewTest {
 	  wait.until(ExpectedConditions.alertIsPresent());
 	  Alert alert = driver.switchTo().alert();
 	  alert.accept();
+	  System.out.println("Invalid 1 run successful!");
   }
   
   @Test 
@@ -66,6 +72,7 @@ public class NewTest {
 	  wait.until(ExpectedConditions.alertIsPresent());
 	  Alert alert = driver.switchTo().alert();
 	  alert.accept();
+	  System.out.println("Invalid 2 run successful!");
   }  
 
 }
