@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" parallel="methods" name="Test(failed)">
+    <parameter name="passWord3" value="myl"/>
+    <parameter name="userName2" value="my"/>
+    <parameter name="userName3" value="mylu"/>
+    <parameter name="passWord1" value="myl0616"/>
+    <parameter name="passWord2" value="myl0616"/>
+    <parameter name="url" value="https://www.demoblaze.com/"/>
+    <parameter name="Browser" value="Edge"/>
+    <parameter name="userName1" value="mylu"/>
     <classes>
       <class name="com.test.NewTest">
         <methods>
           <include name="afterMethod"/>
-          <include name="Invalid1"/>
+          <include name="Invalid1" invocation-numbers="0"/>
           <include name="beforeMethod"/>
-          <include name="valid"/>
-          <include name="Ivalid2"/>
+          <include name="valid" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.test.NewTest -->
     </classes>

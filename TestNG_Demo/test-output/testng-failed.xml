@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="methods" name="Test(failed)">
+    <parameter name="passWord3" value="myl"/>
+    <parameter name="userName2" value="my"/>
+    <parameter name="userName3" value="mylu"/>
+    <parameter name="passWord1" value="myl0616"/>
+    <parameter name="passWord2" value="myl0616"/>
+    <parameter name="url" value="https://www.demoblaze.com/"/>
+    <parameter name="Browser" value="Edge"/>
+    <parameter name="userName1" value="mylu"/>
     <classes>
-      <class name="com.test.SoftAssertionDemo">
+      <class name="com.test.NewTest">
         <methods>
-          <include name="beforeMethod"/>
           <include name="afterMethod"/>
-          <include name="verifyTitla"/>
+          <include name="Invalid1" invocation-numbers="0"/>
+          <include name="beforeMethod"/>
+          <include name="valid" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.test.SoftAssertionDemo -->
+      </class> <!-- com.test.NewTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
