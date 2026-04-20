@@ -103,12 +103,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.test.NewTest" class="method navigator-link" hash-for-method="Invalid1(mylu, myl)">Invalid1(mylu, myl)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.test.NewTest" class="method navigator-link" hash-for-method="Invalid1(myl, myl0616)">Invalid1(myl, myl0616)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.test.NewTest" class="method navigator-link" hash-for-method="Invalid1(myl, myl0616)">Invalid1(myl, myl0616)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.test.NewTest" class="method navigator-link" hash-for-method="Invalid1(mylu, myl)">Invalid1(mylu, myl)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -136,18 +136,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Invalid1(mylu, myl)">
-                  </a> <!-- Invalid1(mylu, myl) -->
-                  <span class="method-name">Invalid1</span>
-                  <span class="parameters">(mylu,myl)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="Invalid1(myl, myl0616)">
                   </a> <!-- Invalid1(myl, myl0616) -->
                   <span class="method-name">Invalid1</span>
                   <span class="parameters">(myl,myl0616)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Invalid1(mylu, myl)">
+                  </a> <!-- Invalid1(mylu, myl) -->
+                  <span class="method-name">Invalid1</span>
+                  <span class="parameters">(mylu,myl)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -170,14 +170,8 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;3&quot; name=&quot;Test&quot;&gt;
-    &lt;parameter name=&quot;passWord3&quot; value=&quot;myl&quot;/&gt;
-    &lt;parameter name=&quot;userName2&quot; value=&quot;my&quot;/&gt;
-    &lt;parameter name=&quot;userName3&quot; value=&quot;mylu&quot;/&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;Test&quot;&gt;
     &lt;parameter name=&quot;passWord1&quot; value=&quot;myl0616&quot;/&gt;
-    &lt;parameter name=&quot;passWord2&quot; value=&quot;myl0616&quot;/&gt;
-    &lt;parameter name=&quot;url&quot; value=&quot;https://www.demoblaze.com/&quot;/&gt;
-    &lt;parameter name=&quot;Browser&quot; value=&quot;Edge&quot;/&gt;
     &lt;parameter name=&quot;userName1&quot; value=&quot;mylu&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.test.NewTest&quot;/&gt;
@@ -224,20 +218,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'valid')
 data.setCell(0, 2, 'com.test.NewTest')
-data.setCell(0, 3, 3158);
+data.setCell(0, 3, 2919);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'Invalid1')
 data.setCell(1, 2, 'com.test.NewTest')
-data.setCell(1, 3, 1984);
+data.setCell(1, 3, 2301);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'Invalid1')
 data.setCell(2, 2, 'com.test.NewTest')
-data.setCell(2, 3, 1851);
+data.setCell(2, 3, 1994);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -265,40 +259,40 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.test.NewTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(Edge, https://www.demoblaze.com/)</span>
+                <span class="method-name">setup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">Invalid1(mylu, myl)</span>
-                <span class="method-start">3023 ms</span>
+                <span class="method-start">4775 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">5022 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(Edge, https://www.demoblaze.com/)</span>
-                <span class="method-start">5263 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">Invalid1(myl, myl0616)</span>
-                <span class="method-start">7198 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">9058 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(Edge, https://www.demoblaze.com/)</span>
-                <span class="method-start">9274 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">valid(mylu, myl0616)</span>
-                <span class="method-start">12017 ms</span>
+                <span class="method-start">5299 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">15177 ms</span>
+                <span class="method-name">tearDown</span>
+                <span class="method-start">7088 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">7336 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">8221 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">Invalid1(myl, myl0616)</span>
+                <span class="method-start">10225 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">12230 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

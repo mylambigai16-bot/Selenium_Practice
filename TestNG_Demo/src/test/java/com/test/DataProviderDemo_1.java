@@ -21,7 +21,7 @@ public class DataProviderDemo_1 {
 
   @AfterMethod
   public void tearDown() {
-	  WebDriver driver1=new ChromeDriver();
+	  WebDriver driver1=driver.get();
 	  System.out.println(Thread.currentThread());
 	  if(driver1 != null)
 	  driver1.quit();
