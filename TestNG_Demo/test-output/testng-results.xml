@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-20T16:43:05 IST" name="Suite" finished-at="2026-04-20T16:43:17 IST" duration-ms="12437">
+  <suite started-at="2026-04-20T21:58:03 IST" name="Suite" finished-at="2026-04-20T21:59:52 IST" duration-ms="108536">
     <groups>
     </groups>
-    <test started-at="2026-04-20T16:43:05 IST" name="Test" finished-at="2026-04-20T16:43:17 IST" duration-ms="12437">
+    <test started-at="2026-04-20T21:58:03 IST" name="Test" finished-at="2026-04-20T21:59:52 IST" duration-ms="108536">
       <class name="com.test.NewTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.test.NewTest@47eaca72]" started-at="2026-04-20T16:43:05 IST" name="setup" finished-at="2026-04-20T16:43:10 IST" duration-ms="5299" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.test.NewTest@47eaca72]" started-at="2026-04-20T21:58:03 IST" name="setup" finished-at="2026-04-20T21:59:24 IST" duration-ms="81188" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.test.NewTest@47eaca72]" started-at="2026-04-20T16:43:05 IST" name="setup" finished-at="2026-04-20T16:43:10 IST" duration-ms="4773" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.test.NewTest@47eaca72]" started-at="2026-04-20T21:58:03 IST" name="setup" finished-at="2026-04-20T21:59:21 IST" duration-ms="77536" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Invalid1(java.lang.String,java.lang.String)[pri:0, instance:com.test.NewTest@47eaca72]" started-at="2026-04-20T16:43:10 IST" name="Invalid1" data-provider="dp" finished-at="2026-04-20T16:43:12 IST" duration-ms="2301" status="PASS">
+        <test-method signature="Invalid1(java.lang.String,java.lang.String)[pri:0, instance:com.test.NewTest@47eaca72]" started-at="2026-04-20T21:59:21 IST" name="Invalid1" data-provider="dp" finished-at="2026-04-20T21:59:24 IST" duration-ms="3265" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -31,7 +31,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Invalid1 -->
-        <test-method signature="valid(java.lang.String,java.lang.String)[pri:0, instance:com.test.NewTest@47eaca72]" started-at="2026-04-20T16:43:10 IST" name="valid" finished-at="2026-04-20T16:43:13 IST" duration-ms="2919" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.NewTest@47eaca72]" started-at="2026-04-20T21:59:24 IST" name="tearDown" finished-at="2026-04-20T21:59:24 IST" duration-ms="519" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="valid(java.lang.String,java.lang.String)[pri:0, instance:com.test.NewTest@47eaca72]" started-at="2026-04-20T21:59:24 IST" name="valid" finished-at="2026-04-20T21:59:51 IST" duration-ms="26924" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -44,22 +48,54 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of all elements located by By.xpath: //a[@id="nameofuser"], but element #0 was invisible: [[ChromeDriver: chrome on windows (5c6252c5f3a9ad9b3888196c420df0f9)] -> xpath: //a[@id="nameofuser"]]
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\MYLAMB~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55391}, goog:processID: 18352, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55391/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5c6252c5f3a9ad9b3888196c420df0f9]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: //a[@id="nameofuser"], but element #0 was invisible: [[ChromeDriver: chrome on windows (5c6252c5f3a9ad9b3888196c420df0f9)] -> xpath: //a[@id="nameofuser"]]
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\MYLAMB~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55391}, goog:processID: 18352, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55391/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5c6252c5f3a9ad9b3888196c420df0f9
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+at com.test.NewTest.valid(NewTest.java:54)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- valid -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.NewTest@47eaca72]" started-at="2026-04-20T16:43:12 IST" name="tearDown" finished-at="2026-04-20T16:43:12 IST" duration-ms="246" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.test.NewTest@47eaca72]" started-at="2026-04-20T16:43:12 IST" name="setup" finished-at="2026-04-20T16:43:15 IST" duration-ms="2888" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.test.NewTest@47eaca72]" started-at="2026-04-20T21:59:24 IST" name="setup" finished-at="2026-04-20T21:59:41 IST" duration-ms="16352" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.NewTest@47eaca72]" started-at="2026-04-20T16:43:13 IST" name="tearDown" finished-at="2026-04-20T16:43:13 IST" duration-ms="281" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method signature="Invalid1(java.lang.String,java.lang.String)[pri:0, instance:com.test.NewTest@47eaca72]" started-at="2026-04-20T16:43:15 IST" name="Invalid1" data-provider="dp" finished-at="2026-04-20T16:43:17 IST" duration-ms="1994" status="PASS">
+        <test-method signature="Invalid1(java.lang.String,java.lang.String)[pri:0, instance:com.test.NewTest@47eaca72]" started-at="2026-04-20T21:59:41 IST" name="Invalid1" data-provider="dp" finished-at="2026-04-20T21:59:44 IST" duration-ms="3055" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -75,7 +111,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Invalid1 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.NewTest@47eaca72]" started-at="2026-04-20T16:43:17 IST" name="tearDown" finished-at="2026-04-20T16:43:17 IST" duration-ms="164" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.NewTest@47eaca72]" started-at="2026-04-20T21:59:44 IST" name="tearDown" finished-at="2026-04-20T21:59:44 IST" duration-ms="350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.NewTest@47eaca72]" started-at="2026-04-20T21:59:51 IST" name="tearDown" finished-at="2026-04-20T21:59:52 IST" duration-ms="284" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Launching {
+public class Launching { 
 
 	public static void main(String[] args) {
 		WebDriver driver=new ChromeDriver();

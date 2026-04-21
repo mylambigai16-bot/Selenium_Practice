@@ -8,7 +8,7 @@
 			<class name="com.test.NewTest" />
 			
 		</classes>
-	</test> <!--
+	</test> <!-- 
 	Test -->
 </suite> <!--
 Suite -->
