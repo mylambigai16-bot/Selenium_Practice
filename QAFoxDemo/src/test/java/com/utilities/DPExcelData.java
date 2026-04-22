@@ -59,12 +59,12 @@ public class DPExcelData {
 	@DataProvider(name="validsearch",parallel=true)
 	public Object[][] excel3(){
 		Object[][] ExcelData=getData("src\\test\\resources\\TestDataFile.xlsx","Sheet2");
-		return new Object[][] { ExcelData[0]};
+		return  ExcelData;
 	}
 	@DataProvider(name="invalidsearch",parallel=true)
 	public Object[][] excel4(){
-		Object[][] ExcelData=getData("src\\test\\resources\\TestDataFile.xlsx","Sheet2");
-		return new Object[][] { ExcelData[1]};
+		Object[][] ExcelData=getData("src\\test\\resources\\TestDataFile.xlsx","Sheet3");
+		return ExcelData;
 	}
 	
 

@@ -5,7 +5,6 @@
     <classes>
       <class name="com.test.LoginTest">
         <methods>
-          <include name="valid" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="tearDown"/>
           <include name="Invalid1"/>

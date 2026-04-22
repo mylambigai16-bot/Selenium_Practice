@@ -6,7 +6,7 @@
       <class name="com.test.LoginAndSearch">
         <methods>
           <include name="setup"/>
-          <include name="validSearch" invocation-numbers="0"/>
+          <include name="invalidSearch" invocation-numbers="0"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.test.LoginAndSearch -->

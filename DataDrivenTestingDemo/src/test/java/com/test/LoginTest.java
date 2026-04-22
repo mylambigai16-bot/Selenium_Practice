@@ -2,6 +2,8 @@ package com.test;
 
 import java.time.Duration;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,6 +20,8 @@ import com.utilities.DPExcel;
 public class LoginTest {
 
 	private static final ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
+	public static Logger logger=LogManager.getLogger(LoginTest.class );
+
 
 	@BeforeMethod
 	public void setup() {
@@ -25,6 +29,7 @@ public class LoginTest {
 	    WebDriver driver1 = new ChromeDriver();
 	    driver.set(driver1);
 	    driver1.get("https://www.demoblaze.com/");
+	    logger.info("Browser launched successfully!");
 	    driver1.manage().window().maximize();
 	}
 
@@ -48,6 +53,7 @@ public class LoginTest {
 		String actual = driver1.findElement(By.xpath("//a[@id=\"nameofuser\"]")).getText();
 		System.out.println(actual);
 		Assert.assertEquals(actual, "Welcome mylu", "Login not successful");
+		logger.info("Login Successful!");
 	}
 
 	@Test(dataProvider="invalidData", dataProviderClass=DPExcel.class)
@@ -62,7 +68,7 @@ public class LoginTest {
 		wait.until(ExpectedConditions.alertIsPresent());
 		Alert alert = driver1.switchTo().alert();
 		alert.accept();
-		System.out.println("Invalid 1 run successful!");
+		logger.info("Invalid works correctly");
 	}
 
 }

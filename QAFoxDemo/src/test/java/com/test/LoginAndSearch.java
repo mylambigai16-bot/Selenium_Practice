@@ -67,7 +67,17 @@ public class LoginAndSearch {
 		driver1.findElement(By.cssSelector("input[name=\"search\"]")).sendKeys(keyword);
 		driver1.findElement(By.xpath("//span/child::button[@type=\"button\"]")).click();
 		WebDriverWait wait=new WebDriverWait(driver1,Duration.ofSeconds(10));
-		Boolean serachProduct=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//a[contains(text(),'Mac')]"))).isDisplayed();
-		Assert.assertTrue(serachProduct);
+		Boolean serachProduct=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//a[contains(text(),'iMac')]"))).isDisplayed();
+		Assert.assertTrue(serachProduct); 
+	}
+	
+	@Test(dataProvider="invalidsearch",dataProviderClass=DPExcelData.class)
+	public void invalidSearch(String keyword) {
+		WebDriver driver1=driver.get();
+		driver1.findElement(By.cssSelector("input[name=\"search\"]")).sendKeys(keyword);
+		driver1.findElement(By.xpath("//span/child::button[@type=\"button\"]")).click();
+		WebDriverWait wait=new WebDriverWait(driver1,Duration.ofSeconds(10));
+		String searchProduct=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='button-search']/following-sibling::p"))).getText();
+		Assert.assertEquals(searchProduct,"There is no product that matches the search criteria.");
 	}
 }
