@@ -87,3 +87,42 @@
 [INFO ] 2026-04-22 14:37:17.336 [TestNG-PoolService-2] LoginTest - Browser launched successfully!
 [INFO ] 2026-04-22 14:37:19.705 [TestNG-PoolService-1] LoginTest - Invalid works correctly
 [INFO ] 2026-04-22 14:37:19.839 [TestNG-PoolService-2] LoginTest - Invalid works correctly
+[DEBUG] 2026-04-25 13:36:33.690 [TestNG-test-Test-1] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-04-25 13:36:33.690 [TestNG-test-Test-2] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-04-25 13:36:33.699 [TestNG-test-Test-2] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2026-04-25 13:36:33.699 [TestNG-test-Test-1] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[INFO ] 2026-04-25 13:36:42.658 [TestNG-PoolService-1] LoginTest - Browser launched successfully!
+[INFO ] 2026-04-25 13:37:15.087 [TestNG-PoolService-1] LoginTest - Browser launched successfully!
+[INFO ] 2026-04-25 13:37:17.997 [TestNG-PoolService-1] LoginTest - Invalid works correctly
+[INFO ] 2026-04-25 13:37:21.350 [TestNG-PoolService-2] LoginTest - Browser launched successfully!
+[INFO ] 2026-04-25 13:37:25.448 [TestNG-PoolService-2] LoginTest - Invalid works correctly
+[DEBUG] 2026-04-25 13:39:48.755 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-04-25 13:39:48.760 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[INFO ] 2026-04-25 13:41:17.992 [TestNG-PoolService-2] LoginTest - Browser launched successfully!
+[INFO ] 2026-04-25 13:41:20.772 [TestNG-PoolService-2] LoginTest - Invalid works correctly
+[INFO ] 2026-04-25 13:42:41.710 [TestNG-PoolService-1] LoginTest - Browser launched successfully!
+[INFO ] 2026-04-25 13:42:45.173 [TestNG-PoolService-1] LoginTest - Invalid works correctly
+[DEBUG] 2026-04-25 13:42:45.478 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-04-25 13:42:45.482 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[INFO ] 2026-04-25 13:42:50.545 [TestNG-PoolService-1] LoginTest - Browser launched successfully!
+[INFO ] 2026-04-25 13:43:10.065 [TestNG-PoolService-1] LoginTest - Login Successful!
+[DEBUG] 2026-04-27 23:30:00.716 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-04-27 23:30:00.722 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[INFO ] 2026-04-27 23:30:47.625 [TestNG-PoolService-2] LoginTest - Browser launched successfully!
+[INFO ] 2026-04-27 23:30:50.922 [TestNG-PoolService-2] LoginTest - Invalid works correctly
+[INFO ] 2026-04-27 23:30:52.910 [TestNG-PoolService-1] LoginTest - Browser launched successfully!
+[INFO ] 2026-04-27 23:30:55.705 [TestNG-PoolService-1] LoginTest - Invalid works correctly
+[DEBUG] 2026-04-27 23:30:55.907 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-04-27 23:30:55.908 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[INFO ] 2026-04-27 23:31:00.942 [TestNG-PoolService-1] LoginTest - Browser launched successfully!
+[INFO ] 2026-04-27 23:31:20.759 [TestNG-PoolService-1] LoginTest - Login Successful!
+[DEBUG] 2026-04-27 23:36:09.747 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-04-27 23:36:09.752 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[INFO ] 2026-04-27 23:36:23.486 [TestNG-PoolService-2] LoginTest - Browser launched successfully!
+[INFO ] 2026-04-27 23:36:24.628 [TestNG-PoolService-1] LoginTest - Browser launched successfully!
+[INFO ] 2026-04-27 23:36:25.972 [TestNG-PoolService-2] LoginTest - Invalid works correctly
+[INFO ] 2026-04-27 23:36:27.141 [TestNG-PoolService-1] LoginTest - Invalid works correctly
+[DEBUG] 2026-04-27 23:36:27.358 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-04-27 23:36:27.359 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[INFO ] 2026-04-27 23:36:32.421 [TestNG-PoolService-1] LoginTest - Browser launched successfully!
+[INFO ] 2026-04-27 23:36:41.695 [TestNG-PoolService-1] LoginTest - Login Successful!
