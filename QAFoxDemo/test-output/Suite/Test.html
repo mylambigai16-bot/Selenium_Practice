@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Apr 22 16:14:05 IST 2026</td>
+<td>Started on:</td><td>Wed Apr 29 12:40:02 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>10 seconds (10367 ms)</td>
+<tr><td>Total time:</td><td>38 seconds (38542 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,44 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.test.LoginAndSearch.invalidSearch()'><b>invalidSearch</b><br>Test class: com.test.LoginAndSearch<br>Parameters: juug</td>
-<td><div><pre>java.lang.AssertionError: expected [There is no product that matches the search criteria. ] but found [There is no product that matches the search criteria.]
-	at com.test.LoginAndSearch.invalidSearch(LoginAndSearch.java:81)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace946246012", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace946246012'><pre>java.lang.AssertionError: expected [There is no product that matches the search criteria. ] but found [There is no product that matches the search criteria.]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.test.LoginAndSearch.invalidSearch(LoginAndSearch.java:81)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
-	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-</pre></div></td>
-<td>1</td>
-<td>com.test.LoginAndSearch@765d7657</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -114,24 +76,29 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.test.LoginAndSearch.validLogin()'><b>validLogin</b><br>Test class: com.test.LoginAndSearch<br>Parameters: myl@gmail.com, 12345</td>
+<td title='com.test.LoginAndSearch.invalidLogin()'><b>invalidLogin</b><br>Test class: com.test.LoginAndSearch<br>Parameters: mylu, 12345</td>
 <td></td>
-<td>3</td>
+<td>8</td>
 <td>com.test.LoginAndSearch@765d7657</td></tr>
 <tr>
 <td title='com.test.LoginAndSearch.validSearch()'><b>validSearch</b><br>Test class: com.test.LoginAndSearch<br>Parameters: mac</td>
 <td></td>
-<td>2</td>
+<td>0</td>
 <td>com.test.LoginAndSearch@765d7657</td></tr>
 <tr>
-<td title='com.test.LoginAndSearch.invalidLogin()'><b>invalidLogin</b><br>Test class: com.test.LoginAndSearch<br>Parameters: mylu, 12345</td>
+<td title='com.test.LoginAndSearch.validLogin()'><b>validLogin</b><br>Test class: com.test.LoginAndSearch<br>Parameters: myl@gmail.com, 12345</td>
 <td></td>
-<td>3</td>
+<td>5</td>
+<td>com.test.LoginAndSearch@765d7657</td></tr>
+<tr>
+<td title='com.test.LoginAndSearch.invalidSearch()'><b>invalidSearch</b><br>Test class: com.test.LoginAndSearch<br>Parameters: juug</td>
+<td></td>
+<td>0</td>
 <td>com.test.LoginAndSearch@765d7657</td></tr>
 <tr>
 <td title='com.test.LoginAndSearch.invalidLogin()'><b>invalidLogin</b><br>Test class: com.test.LoginAndSearch<br>Parameters: myl@gmail.com, 123</td>
 <td></td>
-<td>3</td>
+<td>9</td>
 <td>com.test.LoginAndSearch@765d7657</td></tr>
 </table><p>
 </body>

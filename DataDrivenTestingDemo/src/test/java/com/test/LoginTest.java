@@ -19,10 +19,15 @@ import org.testng.annotations.Test;
 import com.utilities.DPExcel;
 
 @Listeners(ListenerDemo.class)
-public class LoginTest {
+public class LoginTest  {
 
 	private static final ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
+	//public WebDriver driver=new ChromeDriver();
 	public static Logger logger=LogManager.getLogger(LoginTest.class );
+
+	public WebDriver getDriver() {
+	    return driver.get();
+	}
 
 
 	@BeforeMethod
@@ -45,9 +50,9 @@ public class LoginTest {
 
 	@Test(dataProvider="validData", dataProviderClass=DPExcel.class)
 	public void valid(String name, String password) {
-		WebDriver driver1 = driver.get();
+		WebDriver driver1 = driver.get(); 
 		driver1.findElement(By.id("login2")).click();
-		WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(20));
+		WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginusername"))).sendKeys(name);
 		driver1.findElement(By.id("loginpassword")).sendKeys(password);
 		driver1.findElement(By.xpath("//button[text()='Log in']")).click();
@@ -72,5 +77,6 @@ public class LoginTest {
 		alert.accept();
 		logger.info("Invalid works correctly");
 	}
+	
 
 }
