@@ -6,8 +6,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage{
 	
-	public WebDriver driver;
-	
 	public LoginPage(WebDriver driver) {
 		super(driver);
 	}
@@ -27,6 +25,8 @@ public class LoginPage extends BasePage{
 	public void login(String name,String pass) {
 		login_btn.click(); 
 		username.sendKeys(name);
+		password.sendKeys(pass);
+		Login.click();
 	}
 
 }

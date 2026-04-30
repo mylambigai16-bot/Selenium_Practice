@@ -1,9 +1,17 @@
 package com.pages;
 
-import org.testng.annotations.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
-public class DashboardPage {
-  @Test
-  public void f() {
-  }
+public class DashboardPage extends BasePage {
+  
+	public DashboardPage(WebDriver driver) {
+		super(driver);
+	}
+	
+	@FindBy(id="nameofuser")
+	public WebElement dashboardMsg;
+	
+	
 }

@@ -8,8 +8,6 @@ import org.testng.Assert;
 
 public class LoginTest extends BaseTest{
 	
-	
-	
   @Test
   public void loginTest() {
 	  loginObj=new LoginPage(driver);
