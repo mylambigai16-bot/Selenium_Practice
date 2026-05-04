@@ -31,6 +31,8 @@ public class LoginDefinition {
     @When("User enters valid username as {string} and password as {string}")
     public void user_enters_valid_username_as_and_password_as(String username, String password) {
 
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginusername")));
         driver.findElement(By.id("loginusername")).sendKeys(username);
         driver.findElement(By.id("loginpassword")).sendKeys(password);
         driver.findElement(By.xpath("//button[text()='Log in']")).click();
@@ -51,6 +53,8 @@ public class LoginDefinition {
     @When("the User enters username as {string} and invalid password as {string}")
     public void the_user_enters_username_as_and_invalid_password_as(String username, String password) {
 
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginusername")));
         driver.findElement(By.id("loginusername")).sendKeys(username);
         driver.findElement(By.id("loginpassword")).sendKeys(password);
         driver.findElement(By.xpath("//button[text()='Log in']")).click();
@@ -62,7 +66,7 @@ public class LoginDefinition {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.alertIsPresent());
 
-        Alert alert = driver.switchTo().alert();  // ✅ correct way
+        Alert alert = driver.switchTo().alert(); 
 
         String alertMsg = alert.getText();
         Assert.assertEquals(alertMsg, "Wrong password.");
