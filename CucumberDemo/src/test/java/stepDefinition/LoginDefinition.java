@@ -6,21 +6,46 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 
 public class LoginDefinition {
 
     WebDriver driver;
 
+    @Before
+    public void setup() {
+
+        EdgeOptions options = new EdgeOptions();
+
+        options.addArguments("--headless=new");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--remote-allow-origins=*");
+
+        driver = new EdgeDriver(options);
+
+        driver.manage().window().maximize();
+        driver.get("https://www.demoblaze.com/index.html");
+    }
+
+    @After
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
+
     @Given("User is on Home page")
     public void user_is_on_home_page() {
-        driver = new EdgeDriver();
-        driver.get("https://www.demoblaze.com/index.html");
-        driver.manage().window().maximize();
+        
     }
 
     @Given("Click on login")
@@ -31,8 +56,9 @@ public class LoginDefinition {
     @When("User enters valid username as {string} and password as {string}")
     public void user_enters_valid_username_as_and_password_as(String username, String password) {
 
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginusername")));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginusername")));
+
         driver.findElement(By.id("loginusername")).sendKeys(username);
         driver.findElement(By.id("loginpassword")).sendKeys(password);
         driver.findElement(By.xpath("//button[text()='Log in']")).click();
@@ -46,15 +72,14 @@ public class LoginDefinition {
 
         String welcomeMsg = driver.findElement(By.id("nameofuser")).getText();
         Assert.assertTrue(welcomeMsg.contains("Welcome"));
-
-        driver.quit();
     }
 
     @When("the User enters username as {string} and invalid password as {string}")
     public void the_user_enters_username_as_and_invalid_password_as(String username, String password) {
 
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginusername")));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginusername")));
+
         driver.findElement(By.id("loginusername")).sendKeys(username);
         driver.findElement(By.id("loginpassword")).sendKeys(password);
         driver.findElement(By.xpath("//button[text()='Log in']")).click();
@@ -66,12 +91,11 @@ public class LoginDefinition {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.alertIsPresent());
 
-        Alert alert = driver.switchTo().alert(); 
+        Alert alert = driver.switchTo().alert();
 
         String alertMsg = alert.getText();
         Assert.assertEquals(alertMsg, "Wrong password.");
 
         alert.accept();
-        driver.quit();
     }
 }
