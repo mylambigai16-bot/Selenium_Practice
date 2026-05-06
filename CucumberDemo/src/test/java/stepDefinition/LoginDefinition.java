@@ -5,8 +5,8 @@ import java.time.Duration;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -14,6 +14,7 @@ import org.testng.Assert;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginDefinition {
 
@@ -22,17 +23,8 @@ public class LoginDefinition {
     @Before
     public void setup() {
 
-        EdgeOptions options = new EdgeOptions();
+        driver = new ChromeDriver();
 
-        options.addArguments("--headless=new");
-        options.addArguments("--disable-gpu");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--remote-allow-origins=*");
-
-        driver = new EdgeDriver(options);
-
-        driver.manage().window().maximize();
         driver.get("https://www.demoblaze.com/index.html");
     }
 

@@ -3,7 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="stepDefinition.Scenario_Outline"/>
+      <class name="com.stepDefinition.RegistrationDefinition"/>
+      <class name="com.stepDefinition.LoginDefinition"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

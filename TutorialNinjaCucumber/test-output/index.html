@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Mylambigai\AppData\Local\Temp\testng-eclipse-579134455\testng-customsuite.xml</span>
+                    <span>C:\Users\Mylambigai\AppData\Local\Temp\testng-eclipse-135670734\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="runner.dataTableRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Given User on the Login page&quot;, &quot;Example of Scenario outline&quot;)">runScenario("Given User on the Login page", "Example of Scenario outline")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.Runner.RegisterRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Register with valid credentials&quot;, &quot;Login TutorialsNinja application&quot;)">runScenario("Register with valid credentials", "Login TutorialsNinja application")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -121,46 +121,26 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">runner.dataTableRunner</span>
+              <span class="class-name">com.Runner.RegisterRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Given User on the Login page&quot;, &quot;Example of Scenario outline&quot;)">
-                  </a> <!-- runScenario("Given User on the Login page", "Example of Scenario outline") -->
+                  <a name="runScenario(&quot;Register with valid credentials&quot;, &quot;Login TutorialsNinja application&quot;)">
+                  </a> <!-- runScenario("Register with valid credentials", "Login TutorialsNinja application") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Given User on the Login page","Example of Scenario outline")</span>
-                  <div class="stack-trace">io.cucumber.testng.UndefinedStepException: The step &apos;User click on the Login link&apos; and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given(&quot;User click on the Login link&quot;)
-public void user_click_on_the_login_link() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;the User enters username as and the password as&quot;)
-public void the_user_enters_username_as_and_the_password_as(io.cucumber.datatable.DataTable dataTable) {
-    // Write code here that turns the phrase above into concrete actions
-    // For automatic transformation, change DataTable to one of
-    // E, List&lt;E&gt;, List&lt;List&lt;E&gt;&gt;, List&lt;Map&lt;K,V&gt;&gt;, Map&lt;K,V&gt; or
-    // Map&lt;K, List&lt;V&gt;&gt;. E,K,V must be a String, Integer, Float,
-    // Double, Byte, Short, Long, BigInteger or BigDecimal.
-    //
-    // For other transformations you can register a DataTableType.
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;Click on the login button&quot;)
-public void click_on_the_login_button() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;User get the message like {string}&quot;)
-public void user_get_the_message_like(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.User click on the Login link(file:///C:/Users/Mylambigai/Selenium_basic/CucumberDemo/src/test/resources/featureFile/dataTable.feature:5)
+                  <span class="parameters">("Register with valid credentials","Login TutorialsNinja application")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //h1[normalize-space()=&apos;Your Account Has Been Created!&apos;], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[normalize-space()=&apos;Your Account Has Been Created!&apos;]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\MYLAMB~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50131}, goog:processID: 30028, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50131/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5b4e182ecb91188d52550fe29d64811c
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at com.stepDefinition.RegistrationDefinition.the_user_should_see_a_successful_registration_message(RegistrationDefinition.java:77)
+	at ✽.the user should see a successful registration message(file:///C:/Users/Mylambigai/Selenium_basic/TutorialNinjaCucumber/src/test/resources/featureFile/Registration.feature:12)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -172,7 +152,7 @@ public void user_get_the_message_like(String string) {
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Mylambigai\AppData\Local\Temp\testng-eclipse-579134455\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Mylambigai\AppData\Local\Temp\testng-eclipse-135670734\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -181,7 +161,7 @@ public void user_get_the_message_like(String string) {
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;runner.dataTableRunner&quot;/&gt;
+      &lt;class name=&quot;com.Runner.RegisterRunner&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -232,13 +212,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
-data.setCell(0, 2, 'runner.dataTableRunner')
-data.setCell(0, 3, 12483);
+data.setCell(0, 2, 'com.Runner.RegisterRunner')
+data.setCell(0, 3, 22454);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -264,20 +244,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">runner.dataTableRunner</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.Runner.RegisterRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@58e92c23)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@2b8bd798)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("Given User on the Login page", "Example of Scenario outline")</span>
-                <span class="method-start">441 ms</span>
+                <span class="method-name">runScenario("Register with valid credentials", "Login TutorialsNinja application")</span>
+                <span class="method-start">527 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">12930 ms</span>
+                <span class="method-start">22989 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
