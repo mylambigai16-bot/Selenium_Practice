@@ -53,9 +53,10 @@ public class LoginDefinition {
 
 	@Then("the user should able to login successfully")
 	public void the_user_should_able_to_login_successfully() {
-		System.out.println(driver.getCurrentUrl());
+		
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		WebElement LoginAssert=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='Edit your account information']")));
+		System.out.println(driver.getCurrentUrl());
 		System.out.println(LoginAssert.getText());
 		Assert.assertTrue(LoginAssert.isDisplayed());
 	    
