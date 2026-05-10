@@ -1,38 +1,31 @@
 package com.test;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
-import com.pages.LoginPage;
+import org.testng.annotations.AfterMethod;
 
 public class BaseTest {
-	public static final ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
-	public static Logger logger = LogManager.getLogger(BaseTest.class);
-	public static final ThreadLocal<WebElement> element = new ThreadLocal<WebElement>();
 
-	LoginPage lp;
+    public static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-	@BeforeMethod
-	public void setUp() {
-		WebDriver driver1 = new ChromeDriver();
-		driver.set(driver1);
-		driver1.manage().window().maximize();
-		driver1.get("https://www.demoblaze.com/");
-		lp = new LoginPage(driver1);
-	}
+    @BeforeMethod
+    public void setup() {
 
-	@AfterMethod
-	public void tearDown() {
-		WebDriver driver1 = driver.get();
-		if (driver1 != null)
-			driver1.quit();
-		driver.remove();
-	}
+        WebDriver localDriver = new ChromeDriver();
 
+        driver.set(localDriver);
+
+        driver.get().manage().window().maximize();
+
+        driver.get().get("https://www.demoblaze.com/");
+    }
+
+    @AfterMethod
+    public void tearDown() {
+
+        driver.get().quit();
+
+        driver.remove();
+    }
 }
