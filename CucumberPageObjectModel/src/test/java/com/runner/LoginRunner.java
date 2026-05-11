@@ -15,9 +15,12 @@ import io.cucumber.testng.CucumberOptions;
 //        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
 //    },
 
-    plugin= {"pretty","io.qemeta.allure.cucumber7jvm.AllureCucumber7jvm"},
-    monochrome = true
-)
+//    plugin= {"pretty","io.qemeta.allure.cucumber7jvm.AllureCucumber7jvm"},
+//    monochrome = true
+//
+    plugin= { "rerun:target/failed_scenarios.txt"}
+    
+		)
 
 public class LoginRunner extends AbstractTestNGCucumberTests {
 

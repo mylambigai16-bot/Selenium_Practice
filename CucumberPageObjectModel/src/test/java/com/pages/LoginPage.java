@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage {
 	
-	@FindBy(xpath="//input[@placeholder='Username']")
+	@FindBy(xpath="//input[@placeholder='Usernam']")
 	public WebElement username;
 	
 	@FindBy(xpath="//input[@placeholder='Password']")
